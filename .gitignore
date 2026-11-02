@@ -1,0 +1,35 @@
+# Compilação
+build*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.zip
+
+# Arquivos do usuário: nunca publique jogos, BIOS, firmware ou chaves
+/cores/
+/roms/
+/system/
+/saves/
+/states/
+/screenshots/
+/covers/
+/emuladores/
+*.bin
+*.iso
+*.chd
+*.cue
+*.gdi
+*.cdi
+*.pbp
+*.rvz
+*.wbfs
+*.nsp
+*.xci
+*.keys
+*.qcow2
+UniEmu.ini
+controles.cfg
+*.log
+*.uniemu-backup
