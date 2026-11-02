@@ -1,0 +1,22 @@
+#include <winver.h>
+1 ICON "uniemu.ico"
+1 24 "uniemu.manifest"
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2,1,0,0
+PRODUCTVERSION 2,1,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "041604B0"
+    BEGIN
+      VALUE "FileDescription", "UniEmu - Dreamcast, PlayStation, Nintendo 64 e Super Nintendo"
+      VALUE "ProductName", "UniEmu"
+      VALUE "FileVersion", "2.1.0"
+      VALUE "ProductVersion", "2.1.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0416, 1200
+  END
+END

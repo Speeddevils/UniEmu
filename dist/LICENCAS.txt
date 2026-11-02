@@ -1,0 +1,54 @@
+UniEmu - avisos de licença de terceiros
+=======================================
+
+O UniEmu (UniEmu.exe) carrega núcleos libretro como módulos separados (pasta cores).
+Cada núcleo é um programa independente, distribuído sob sua própria licença.
+Os binários foram compilados sem modificações funcionais a partir destes fontes:
+
+  flycast_libretro.dll           Flycast (Dreamcast)          GPL v2
+      https://github.com/flyinghead/flycast  (commit 7adbf3c)
+      * ajuste de compilação MinGW em core/deps/xbyak (EfficiencyClass)
+  mednafen_psx_hw_libretro.dll   Beetle PSX HW (PlayStation)  GPL v2
+      https://github.com/libretro/beetle-psx-libretro  (commit 71ee81e)
+  pcsx_rearmed_libretro.dll      PCSX ReARMed (PlayStation)   GPL v2
+      https://github.com/libretro/pcsx_rearmed  (commit 7b0e8f8)
+  mupen64plus_next_libretro.dll  Mupen64Plus-Next (N64)       GPL v2
+      https://github.com/libretro/mupen64plus-libretro-nx  (commit 15bada8)
+  snes9x_libretro.dll            Snes9x (Super Nintendo)      Licença Snes9x - uso NÃO comercial
+      https://github.com/libretro/snes9x  (commit fae2fea)
+  genesis_plus_gx_libretro.dll Genesis Plus GX (Mega Drive)  Licença própria - uso NÃO comercial
+      https://github.com/libretro/Genesis-Plus-GX
+  stella_libretro.dll         Stella (Atari 2600)           GPL v2
+      https://github.com/stella-emu/stella
+  libwinpthread-1.dll            MinGW-w64 winpthreads        MIT/BSD
+
+Conforme a GPL, o código-fonte correspondente está nos endereços acima (commits exatos)
+e pode ser solicitado junto com este pacote.
+
+Componentes dentro do UniEmu.exe:
+  SDL2 2.30.9 ................ zlib license          https://libsdl.org
+  Dear ImGui 1.91.9 .......... MIT                   https://github.com/ocornut/imgui
+  miniz 3.0.2 ................ MIT                   https://github.com/richgel999/miniz
+  xBR-lv2 (Hyllian) .......... MIT                   https://github.com/libretro/glsl-shaders
+  gamecontrollerdb.txt ....... zlib license          https://github.com/mdqinc/SDL_GameControllerDB
+  stb_image .................. domínio público/MIT  https://github.com/nothings/stb
+  AMD FidelityFX FSR 1.0 ..... MIT                   https://github.com/GPUOpen-Effects/FidelityFX-FSR
+  Press Start 2P (fonte) ..... SIL Open Font License (fonts\OFL.txt)
+  libretro.h ................. MIT                   https://github.com/libretro/libretro-common
+
+ATENÇÃO - USO COMERCIAL: as licenças do Snes9x e do Genesis Plus GX proíbem uso comercial.
+Para uso ou redistribuição comercial, troque esses núcleos por equivalentes GPL
+(ex.: bsnes para SNES, BlastEm para Mega Drive).
+
+Emuladores externos (Dolphin, PCSX2, xemu, Xenia, RPCS3, shadPS4 e o emulador de Switch) NÃO
+acompanham o UniEmu: são programas independentes, baixados pelo usuário dos sites oficiais, cada um com
+sua própria licença. BIOS, firmware e chaves também não acompanham o UniEmu.
+O HD virtual do Xbox (xbox_hdd.qcow2) é baixado sob demanda do projeto oficial xemu-dashboard
+(https://github.com/xemu-project/xemu-dashboard, software livre). Núcleos baixados pelo botão
+"Baixar núcleo" vêm do servidor oficial do libretro (https://buildbot.libretro.com).
+
+O código-fonte do próprio UniEmu está em codigo-fonte\UniEmu-src.zip.
+
+Capas: baixadas sob demanda do acervo comunitário libretro-thumbnails
+(https://github.com/libretro-thumbnails). As artes pertencem aos respectivos
+detentores dos direitos e são usadas apenas para identificar os jogos na sua biblioteca.

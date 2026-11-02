@@ -1,0 +1,184 @@
+UniEmu 2.1 - 14 consoles num só lugar
+=====================================
+Clássicos (rodam dentro do UniEmu): Atari 2600, Mega Drive, Super Nintendo, PlayStation,
+  Nintendo 64 e Dreamcast.
+Modernos (abertos pelo UniEmu nos melhores emuladores de cada um): PlayStation 2 (PCSX2),
+  GameCube e Wii (Dolphin), Xbox (xemu), Xbox 360 (Xenia Canary), PlayStation 3 (RPCS3),
+  PlayStation 4 (shadPS4) e Nintendo Switch (o emulador que você usa).
+
+COMO USAR
+---------
+1. Abra o UniEmu.exe.
+2. Na aba "Pastas de jogos", clique em "Procurar..." e escolha as pastas onde ficam
+   seus jogos. Pode misturar os consoles: o UniEmu identifica cada jogo sozinho.
+   (Também dá para arrastar uma pasta ou um jogo para a janela.)
+3. Escolha o console na barra lateral e clique na capa do jogo para jogar
+   (ou navegue com as setas / controle e aperte Enter / botão A).
+
+CONSOLES MODERNOS (EMULADORES EXTERNOS)
+---------------------------------------
+Na aba "Emuladores externos" o UniEmu mostra se encontrou cada emulador. Coloque-os em
+UniEmu\emuladores\ (ou na pasta Emuladores) que ele acha sozinho, ou use "Procurar...".
+  - PlayStation 2 ... PCSX2 (pcsx2.net). Precisa da BIOS do seu PS2, configurada no PCSX2.
+  - GameCube / Wii .. Dolphin (dolphin-emu.org). Não precisa de BIOS.
+  - Xbox ............ xemu (xemu.app). Precisa da Boot ROM e da BIOS do seu Xbox; o HD virtual
+                      oficial o UniEmu baixa e configura sozinho (aba "BIOS e núcleos").
+  - Xbox 360 ........ Xenia Canary (github.com/xenia-canary). Não precisa de BIOS. Pede placa
+                      com DirectX 12 ou Vulkan.
+  - PlayStation 3 ... RPCS3 (rpcs3.net). Instale o firmware oficial (PS3UPDAT.PUP) pelo RPCS3.
+                      Jogos instalados no RPCS3 aparecem sozinhos na biblioteca.
+  - PlayStation 4 ... shadPS4 (shadps4.net). Ainda em desenvolvimento: só parte dos jogos roda.
+  - Switch .......... aponte o emulador que você já usa (família Ryujinx ou yuzu). O UniEmu não
+                      fornece chaves nem firmware: precisam ser extraídas do seu console.
+Ao clicar na capa, o UniEmu abre o emulador já com o upscale, a tela 16:9, a tela cheia e a
+placa de vídeo escolhidos. Os controles desses consoles são configurados no próprio emulador.
+Antes de mudar um arquivo de configuração de um emulador, o UniEmu guarda uma cópia
+(".uniemu-backup") ao lado dele.
+
+PLACA DE VÍDEO (INTEGRADA OU DEDICADA)
+--------------------------------------
+"Vídeo e Upscale" -> "Placa de vídeo usada nos jogos": Automático, Integrada (economia) ou
+Dedicada (alto desempenho). Vale para o UniEmu e para os emuladores externos a partir do
+próximo jogo (é a mesma opção do Windows em Configurações > Sistema > Tela > Gráficos).
+Na placa integrada, use o perfil "Placa integrada" e o filtro AMD FSR.
+
+SUPER RESOLUÇÃO (FSR) E DLSS
+----------------------------
+  - Filtro "AMD FSR 1.0": super resolução em tempo real com nitidez adaptativa, em qualquer
+    placa de vídeo. Ideal para rodar com upscale baixo e ainda ter imagem nítida na TV.
+  - DLSS: precisa de dados que só o motor do próprio jogo fornece (vetores de movimento e
+    profundidade), por isso nenhum emulador consegue usá-lo. O "DLSS 5 Visual Enhancer"
+    melhora arquivos de foto e vídeo já gravados, não o jogo em tempo real.
+  - Com placa RTX, use o DLDSR (IA da NVIDIA que funciona com o UniEmu): Painel de Controle
+    NVIDIA > Gerenciar configurações 3D > Fatores DSR > marque "DL 1.78x" e "DL 2.25x" e escolha
+    a resolução maior no Windows.
+
+CAPAS DOS JOGOS
+---------------
+  - Com "Automático" marcado, o UniEmu baixa sozinho as capas dos jogos novos
+    (acervo comunitário libretro-thumbnails). Também há o botão "Baixar capas".
+  - As capas ficam na pasta covers\<console>\ com o mesmo nome do arquivo do jogo.
+    Você pode colocar a sua própria imagem lá (PNG ou JPG).
+  - Clique com o botão direito numa capa: baixar de novo, escolher uma imagem do
+    computador ou remover a capa.
+  - Jogos que não existem no acervo (traduções, homebrew) aparecem com uma capa
+    provisória com o nome do jogo.
+  - "Capas" / "Lista" muda o modo de exibição; "Tamanho" ajusta o tamanho das capas.
+
+UPSCALE (igual ao do Redream, agora para todos)
+-----------------------------------------------
+Aba "Vídeo e Upscale":
+  - Dreamcast, PlayStation, Nintendo 64, PS2, GameCube, Wii, Xbox, Xbox 360, PS3 e Switch: upscale
+    por console (os perfis "Placa integrada", "TV 1080p" e "TV 4K" ajustam tudo de uma vez).
+  - Dreamcast, PlayStation e Nintendo 64: de 1x a 8x. O 3D é renderizado
+    numa resolução interna maior (ex.: Dreamcast 4x = 2560x1920).
+  - Numa TV 1080p, 4x é o ideal: já passa da resolução da tela e o UniEmu reduz a
+    imagem com anti-serrilhado. 8x pesa bem mais e quase não muda a imagem em 1080p
+    (use 6x-8x só em TV 4K).
+  - Super Nintendo, Mega Drive e Atari 2600 (2D): o equivalente é o filtro "xBR" ou o "AMD FSR".
+  - Filtros por console: nítido, bilinear (com anti-serrilhado), sharp bilinear, CRT e xBR.
+  - PS1: correção de geometria PGXP (tira a "tremedeira" dos polígonos).
+O upscale novo vale a partir do próximo jogo que você abrir.
+
+TELA 16:9 (WIDESCREEN)
+----------------------
+Em "Vídeo e Upscale" -> "Tela", por console (também no menu do jogo, tecla Esc):
+  - 4:3 original
+  - 16:9 esticado: estica a imagem para ocupar a TV toda. Funciona em qualquer jogo.
+  - 16:9 widescreen real: o jogo desenha mais cenário nas laterais (Dreamcast, PS1, N64).
+    No Dreamcast usa patches 16:9 específicos do jogo quando existem.
+    Em jogos com cenários pré-desenhados (Alone in the Dark, Resident Evil, Final Fantasy)
+    o widescreen real não tem o que mostrar nas laterais: use "16:9 esticado".
+
+DESEMPENHO
+----------
+  - F3 mostra o FPS e quanto tempo cada quadro leva para ser emulado.
+  - Com a TV a 60 Hz e VSync ligado, o UniEmu deixa o VSync ditar o ritmo e ajusta o
+    áudio sozinho (sem engasgos). Em monitores de 120/144 Hz usa um relógio preciso.
+  - Se o FPS cair, baixe o upscale do console para 4x.
+
+FORMATOS ACEITOS
+----------------
+  Dreamcast ......... .gdi .cdi .chd
+  PlayStation ....... .cue/.bin .chd .pbp .iso .m3u (multidisco)
+  Nintendo 64 ....... .z64 .n64 .v64 (também dentro de .zip)
+  Super Nintendo .... .sfc .smc (também dentro de .zip)
+  Atari 2600 ........ .a26 (também dentro de .zip)
+  Mega Drive ........ .md .gen .smd .bin (também dentro de .zip)
+  PlayStation 2 ..... .iso .chd .cso .zso
+  GameCube / Wii .... .iso .gcm .rvz .wbfs .gcz .wia .ciso .wad
+  PlayStation 3 ..... pasta do jogo (PS3_GAME) ou jogos instalados no RPCS3
+  PlayStation 4 ..... pasta do jogo (eboot.bin + sce_sys)
+  Switch ............ .nsp .xci .nsz .xcz
+  Xbox .............. .iso (XISO ou imagem Redump) .xiso
+  Xbox 360 .......... .iso, pasta extraída (default.xex) ou .xex
+
+BIOS, NÚCLEOS E DOWNLOADS
+-------------------------
+A aba "BIOS e núcleos" mostra, console por console, o que cada um precisa e o que falta:
+  - Núcleo faltando: botão "Baixar núcleo" (servidor oficial do libretro, código aberto).
+  - Emulador externo faltando: botão "Baixar (site oficial)".
+  - Firmware do PS3: link para o site oficial da PlayStation (gratuito).
+  - HD virtual do Xbox: o UniEmu baixa o HD pré-formatado oficial do xemu e configura.
+  - BIOS de PS1, PS2, Dreamcast e Xbox: links para os guias oficiais de como copiar do seu
+    próprio console. Não há link direto para baixar BIOS: são arquivos protegidos por direitos
+    autorais da Sony, Sega e Microsoft, e a cópia do seu console é a forma legal de tê-los.
+
+BIOS dos consoles internos (pasta "system"):
+  PlayStation: coloque scph5501.bin (EUA), scph5500.bin (JP) ou scph5502.bin (EU).
+               Sem BIOS o PS1 roda em modo compatível (PCSX ReARMed), com upscale até 2x.
+  Dreamcast:   opcional (dc_boot.bin e dc_flash.bin em system\dc). Sem ela usa BIOS HLE.
+  N64, SNES, Mega Drive e Atari 2600: não precisam.
+A aba "BIOS e núcleos" mostra o que foi encontrado.
+
+CONTROLES
+---------
+Controles de Xbox/PlayStation e genéricos USB são detectados sozinhos (até 4 jogadores).
+Ao abrir o jogo, aparece no canto da tela quais controles foram detectados.
+O analógico esquerdo funciona como analógico e, por padrão, também como direcional
+(Dreamcast, PS1 e SNES). Dá para desligar em "Vídeo e Upscale" ou no menu do jogo.
+Se algum botão de um controle genérico estiver trocado: aba "Controles" ->
+"Configurar botões" e aperte cada botão pedido (fica salvo em controles.cfg).
+Teclado (jogador 1): setas = direcional | Z X A S = B A Y X | Q W = L R | E R = L2 R2
+                     Enter = Start | Backspace = Select | I J K L = analógico direito / botões C do N64
+No N64 as setas viram o analógico e T F G H o direcional.
+
+Durante o jogo:
+  Esc (ou Select+Start no controle) .... menu (salvar/carregar, trocar disco, filtro, sair)
+  F2 / F4 ................................ salvar / carregar estado   (F6/F7 trocam o slot)
+  Tab (segurar) .......................... acelerar
+  P ...................................... pausar
+  F11 ou Alt+Enter ....................... tela cheia
+  F12 .................................... captura de tela (pasta screenshots)
+  F3 ..................................... mostrar/esconder FPS
+
+PASTAS
+------
+  cores\        núcleos de emulação (não apague)
+  system\       BIOS
+  saves\        saves dos jogos (memória/cartão/VMU)
+  states\       estados salvos (F2)
+  screenshots\  capturas de tela
+  covers\       capas dos jogos (uma pasta por console)
+  fonts\        fonte do tema retrô
+  UniEmu.ini    configurações (usuários avançados: "core.<opcao> = valor" força
+                qualquer opção de núcleo libretro)
+  UniEmu.log / UniEmu-jogo.log   registros para diagnóstico
+
+COMO FUNCIONA
+-------------
+O UniEmu é um frontend libretro: um programa único que carrega, para cada console,
+um núcleo de emulação de código aberto. O "Upscale" único da interface é traduzido
+para a opção certa de cada núcleo:
+  Dreamcast  -> Flycast            (reicast_internal_resolution)
+  PS1        -> Beetle PSX HW      (beetle_psx_hw_internal_resolution + PGXP)
+  N64        -> Mupen64Plus-Next   (GLideN64, mupen64plus-EnableNativeResFactor)
+  SNES       -> Snes9x             (filtro xBR no próprio UniEmu)
+Nenhum código do Redream foi usado: o upscale é a mesma técnica (resolução interna),
+implementada pelos núcleos abertos.
+
+Requisitos: Windows 10/11 64 bits, placa de vídeo com OpenGL 3.3+ (sua RTX 3080 sobra).
+Se o Windows SmartScreen avisar na primeira execução, clique em "Mais informações" ->
+"Executar assim mesmo" (o programa não é assinado digitalmente).
+
+Licenças: veja LICENCAS.txt. Jogos e BIOS não acompanham o programa.

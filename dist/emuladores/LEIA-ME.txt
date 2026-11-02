@@ -1,0 +1,12 @@
+Coloque aqui as pastas dos emuladores externos (o UniEmu encontra sozinho):
+  Dolphin       (GameCube e Wii)   - https://dolphin-emu.org/download/
+  PCSX2         (PlayStation 2)    - https://pcsx2.net/downloads
+  xemu          (Xbox)             - https://xemu.app/docs/download/
+  Xenia Canary  (Xbox 360)         - https://github.com/xenia-canary/xenia-canary-releases/releases/latest
+  RPCS3         (PlayStation 3)    - https://rpcs3.net/download
+  shadPS4       (PlayStation 4)    - https://shadps4.net
+  Emulador de Switch que voce ja usa (familia Ryujinx ou yuzu)
+Exemplo: UniEmu\emuladores\PCSX2\pcsx2-qt.exe
+         UniEmu\emuladores\xemu\xemu.exe
+         UniEmu\emuladores\xenia_canary\xenia_canary.exe
+Os mesmos links estao na aba "BIOS e nucleos" do UniEmu.

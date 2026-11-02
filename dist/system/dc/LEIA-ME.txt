@@ -1,0 +1,1 @@
+Opcional: dc_boot.bin e dc_flash.bin

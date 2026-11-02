@@ -1,0 +1,24 @@
+﻿Coloque aqui as BIOS (cópias feitas dos seus próprios consoles):
+
+PlayStation (recomendado):  scph5501.bin  (EUA)
+                            scph5500.bin  (Japão)
+                            scph5502.bin  (Europa)
+  -> Com a BIOS, o PS1 usa o Beetle PSX HW com upscale até 8x (16x em configurações avançadas).
+  -> Sem a BIOS, usa o PCSX ReARMed (BIOS HLE), com upscale até 2x.
+
+Dreamcast (opcional): dc\dc_boot.bin e dc\dc_flash.bin
+  -> Sem elas, o Flycast usa uma BIOS HLE interna.
+
+Nintendo 64, Super Nintendo, Mega Drive e Atari 2600 não precisam de BIOS.
+
+Consoles modernos (configurados dentro de cada emulador, não nesta pasta):
+  PS2 ...... BIOS do seu PS2 (guia oficial: https://pcsx2.net/docs/setup/bios/)
+  PS3 ...... firmware oficial gratuito da Sony, instalado pelo RPCS3
+  Xbox ..... Boot ROM + BIOS do seu Xbox (guia: https://xemu.app/docs/required-files/);
+             o HD virtual o UniEmu baixa pronto (aba "BIOS e núcleos")
+  Xbox 360, GameCube, Wii e PS4: não precisam.
+  Switch ... chaves e firmware do seu próprio console.
+
+O UniEmu não indica sites de download de BIOS: elas são protegidas por direitos autorais
+e a forma legal de tê-las é copiar do seu próprio console. A aba "BIOS e núcleos" mostra
+o que falta e leva aos guias oficiais de como fazer a cópia.
